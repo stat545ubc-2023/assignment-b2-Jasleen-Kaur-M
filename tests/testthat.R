@@ -10,3 +10,4 @@ library(testthat)
 library(histogramr)
 
 test_check("histogramr")
+testthat::test_dir("/Users/jasleenkaur/histogramr/tests")

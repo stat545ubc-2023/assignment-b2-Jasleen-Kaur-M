@@ -4,7 +4,7 @@
 #'
 #' @param data A data frame containing the dataset.
 #' @param var The name of the numeric variable to create a histogram for.
-#' @param bins The number of bins for the histogram (default is 10).
+#' @param bins The binwidth for the histogram (default is 10).
 #' @param col The color of the histogram bars (default is "lightpink").
 #'
 #'
