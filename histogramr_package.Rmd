@@ -46,7 +46,7 @@ We also include the `Roxygen2` documentation to make things easier to understand
 #' @param data A data frame containing the dataset.
 #' @param var The name of the numeric variable to create a histogram for.
 #' @param bins The number of bins for the histogram (default is 10).
-#' @param col The color of the histogram bars (default is "blue").
+#' @param col The color of the histogram bars (default is "lightpink").
 #'
 #'
 #' @examples
@@ -56,6 +56,8 @@ We also include the `Roxygen2` documentation to make things easier to understand
 #'
 #'
 #' @export
+
+
 histogram <- function(data, var, bins = 10, col = "lightpink") {
   # check if the data is a data frame
   if (!is.data.frame(data)) {
@@ -184,7 +186,22 @@ setwd("/Users/jasleenkaur/histogramr")
 ```
 
 ```{r}
-document()
+devtools::document()
+devtools::build()
 ```
 
+```{r}
+#Create the readme file
+usethis::use_readme_rmd()
+
+```
+```{r}
+
+# For example, you can run tests with devtools::test().
+devtools::test()
+
+# Or check your package with devtools::check().
+devtools::check()
+
+```
 
