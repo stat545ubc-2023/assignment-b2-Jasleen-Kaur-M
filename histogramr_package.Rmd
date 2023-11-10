@@ -208,4 +208,7 @@ devtools::test()
 devtools::check()
 
 ```
+```{r}
+usethis::use_build_ignore("histogramr_package.Rmd")
+```
 
