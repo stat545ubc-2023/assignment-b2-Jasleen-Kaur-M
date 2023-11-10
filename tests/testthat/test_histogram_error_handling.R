@@ -1,5 +1,6 @@
-# Test: Provide an invalid input and check if it throws an error
-
+#' Test if an invalid input provides an error
+#'
+#' @test
 test_that("histogram function throws an error for an invalid input", {
   data <- data.frame(z = "notnumeric")
   var <- "z"
