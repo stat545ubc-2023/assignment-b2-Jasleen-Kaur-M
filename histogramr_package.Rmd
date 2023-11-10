@@ -191,6 +191,10 @@ devtools::build()
 ```
 
 ```{r}
+devtools::install("//Users/jasleenkaur/histogramr")
+```
+
+```{r}
 #Create the readme file
 usethis::use_readme_rmd()
 

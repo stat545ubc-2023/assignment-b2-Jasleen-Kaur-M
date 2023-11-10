@@ -1,0 +1,46 @@
+---
+output: github_document
+---
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# histogramr
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of `histogramr` package is to help create histograms easily, using minimal inputs. The `histogram` function can also be tweaked and desired additions can be made to it. Additionally, it can handle errors and give error messages (if any) based on the input.
+
+## Installation
+
+You can install the development version of histogramr from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("stat545ubc-2023/histogramr")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(histogramr)
+
+# Example used from the `cancer_sample` dataset from the `datateachr` package.
+
+#Laod `datateachr` package
+library(datateachr)
+
+hist1 <- histogram(cancer_sample, var = "area_worst")
+print(hist1)
+```
+
