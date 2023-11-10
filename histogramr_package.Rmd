@@ -102,12 +102,16 @@ hist1 <- histogram(data, var = "area_worst")
 print(hist1)
 
 ```
+
+
 ``` {r}
 # Create a histogram with different arguments
 hist2 <- histogram(data, var = "concavity_worst", bins = 15, col = "lightblue")
 
 print(hist2)
 ```
+
+
 ``` {r, error = TRUE}
 # Try to create a histogram with an invalid argument
 hist3 <- histogram(data, var = "diagnosis")
@@ -142,3 +146,45 @@ test_that("histogram function throws an error for an invalid input", {
 
 
 ```
+
+```{r, message = FALSE}
+# Install `devtools` package if not already installed
+if (!require(devtools)) {
+  install.packages("devtools")
+}
+
+# Load the library.
+library(devtools)
+```
+
+```{r}
+
+# Install the `usethis` package
+if(!require(usethis)) {
+  install.packages("usethis")
+}
+
+# Load the library
+library(usethis)
+use_description(fields = list(
+  Package = "histogramr",
+  Title = "A Package for Creating Histograms",
+  Description = "This package provides a function to create histograms of numeric variables in data frames.",
+  Version = "0.1.0",
+  License = "MIT + file LICENSE",
+  Author = "Jasleen Kaur"
+))
+
+use_mit_license(copyright_holder = "Jasleen Kaur")
+```
+
+```{r}
+# Set the working directory for this chunk
+setwd("/Users/jasleenkaur/histogramr")
+```
+
+```{r}
+document()
+```
+
+
