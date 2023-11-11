@@ -7,6 +7,7 @@
 #' @param bins The binwidth for the histogram (default is 10).
 #' @param col The color of the histogram bars (default is "lightpink").
 #'
+#'@return A ggplot output representing a histogram.
 #'
 #' @examples
 #' data <- data.frame(x = rnorm(100))
